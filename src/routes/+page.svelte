@@ -172,7 +172,7 @@
 				</RadioGroup.Root>
 			</div>
 			<br />
-			<Button onclick={() => filter.reset()}>Reset Filters</Button>
+			<Button onclick={() => filter.reset()} class="w-full">Reset Filters</Button>
 		</Card.Content>
 	</Card.Root>
 
