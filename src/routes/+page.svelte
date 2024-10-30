@@ -143,7 +143,7 @@
 		<Card.Content>
 			<div class="filters">
 				<!-- Category Filter -->
-				<h3 class="mb-2 text-2xl font-bold">Category</h3>
+				<h2 class="mb-2 text-2xl font-bold">Category</h2>
 				<RadioGroup.Root value={dimensions?.category?.selected}>
 					{#each ['Any', ...config.category] as option}
 						<div class="flex items-center space-x-2">
@@ -160,7 +160,7 @@
 				</RadioGroup.Root>
 
 				<!-- Color Filter -->
-				<h3 class="mb-2 text-2xl font-bold">Color</h3>
+				<h2 class="mb-2 text-2xl font-bold">Color</h2>
 				<RadioGroup.Root value={dimensions?.color?.selected}>
 					{#each ['Any', ...config.color] as option}
 						<div class="flex items-center space-x-2">
