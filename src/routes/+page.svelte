@@ -11,11 +11,6 @@
 	import { slide } from 'svelte/transition';
 	import Icon from '@iconify/svelte';
 
-	interface ProductFilter {
-		category: 'Shirt' | 'Pants' | 'Jacket';
-		color: 'Red' | 'Blue' | 'Black';
-	}
-
 	interface Product {
 		category: 'Shirt' | 'Pants' | 'Jacket';
 		color: 'Red' | 'Blue' | 'Black';
@@ -25,12 +20,12 @@
 	}
 
 	const products: Product[] = $state([
-		{ category: 'Shirt', color: 'Red', name: 'T-Shirt', expand: false },
-		{ category: 'Pants', color: 'Blue', name: 'Slim Fit Pants', expand: false },
-		{ category: 'Shirt', color: 'Black', name: 'Long Sleeve Shirt', expand: false },
-		{ category: 'Jacket', color: 'Red', name: 'Classic Jacket', expand: false },
-		{ category: 'Jacket', color: 'Blue', name: 'Cargo Jacket', expand: false },
-		{ category: 'Pants', color: 'Black', name: 'Cropped Jeans', expand: false }
+		{ category: 'Shirt', color: 'Red', name: 'T-Shirt', expand: false, code: '' },
+		{ category: 'Pants', color: 'Blue', name: 'Slim Fit Pants', expand: false, code: '' },
+		{ category: 'Shirt', color: 'Black', name: 'Long Sleeve Shirt', expand: false, code: '' },
+		{ category: 'Jacket', color: 'Red', name: 'Classic Jacket', expand: false, code: '' },
+		{ category: 'Jacket', color: 'Blue', name: 'Cargo Jacket', expand: false, code: '' },
+		{ category: 'Pants', color: 'Black', name: 'Cropped Jeans', expand: false, code: '' }
 	]);
 
 	const config = {
