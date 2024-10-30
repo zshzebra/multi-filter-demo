@@ -121,10 +121,20 @@
 
 <div class="flex items-center gap-4 p-10">
 	<h1 class="text-4xl font-bold">Svelte Multi Filter</h1>
-	<a href="https://github.com/zshzebra/svelte-multi-filter" target="_blank" class="ml-auto">
+	<a
+		href="https://github.com/zshzebra/svelte-multi-filter"
+		target="_blank"
+		class="ml-auto"
+		aria-label="GitHub"
+	>
 		<Icon icon="simple-icons:github" class="h-6 w-6 text-zinc-900" />
 	</a>
-	<a href="https://jsr.io/@zshzebra/svelte-multi-filter" target="_blank">
+	<a
+		href="https://jsr.io/@zshzebra/svelte-multi-filter"
+		target="_blank"
+		class="ml-auto"
+		aria-label="JSR"
+	>
 		<Icon icon="simple-icons:jsr" class="h-6 w-6 text-zinc-900" />
 	</a>
 </div>
@@ -142,6 +152,7 @@
 								id={option}
 								onclick={() => filter.select('category', option)}
 								disabled={!availableCategoryOptions.includes(option) && !(option === 'Any')}
+								aria-label={option}
 							/>
 							<Label for={option}>{option}</Label>
 						</div>
@@ -158,6 +169,7 @@
 								id="col-{option}"
 								onclick={() => filter.select('color', option)}
 								disabled={!availableColorOptions.includes(option) && !(option === 'Any')}
+								aria-label={option}
 							/>
 							<Label for="col-{option}">{option}</Label>
 						</div>
