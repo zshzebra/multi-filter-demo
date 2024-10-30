@@ -129,12 +129,7 @@
 	>
 		<Icon icon="simple-icons:github" class="h-6 w-6 text-zinc-900" />
 	</a>
-	<a
-		href="https://jsr.io/@zshzebra/svelte-multi-filter"
-		target="_blank"
-		class="ml-auto"
-		aria-label="JSR"
-	>
+	<a href="https://jsr.io/@zshzebra/svelte-multi-filter" target="_blank" aria-label="JSR">
 		<Icon icon="simple-icons:jsr" class="h-6 w-6 text-zinc-900" />
 	</a>
 </div>
