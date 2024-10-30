@@ -9,6 +9,7 @@
 	import Label from '$lib/components/ui/label/label.svelte';
 	import * as RadioGroup from '$lib/components/ui/radio-group';
 	import { slide } from 'svelte/transition';
+	import Icon from '@iconify/svelte';
 
 	interface ProductFilter {
 		category: 'Shirt' | 'Pants' | 'Jacket';
@@ -118,7 +119,16 @@
 	</Card.Root>
 {/snippet}
 
-<div class="m-10 flex h-max w-full flex-row gap-8">
+<div class="flex items-center gap-4 p-10">
+	<h1 class="text-4xl font-bold">Svelte Multi Filter</h1>
+	<a href="https://github.com/zshzebra/svelte-multi-filter" target="_blank" class="ml-auto">
+		<Icon icon="simple-icons:github" class="h-6 w-6 text-zinc-900" />
+	</a>
+	<a href="https://jsr.io/@zshzebra/svelte-multi-filter" target="_blank">
+		<Icon icon="simple-icons:jsr" class="h-6 w-6 text-zinc-900" />
+	</a>
+</div>
+<div class="m-10 mt-0 flex h-max w-full flex-row gap-8">
 	<Card.Root class="h-max w-64">
 		<Card.Content>
 			<div class="filters">
