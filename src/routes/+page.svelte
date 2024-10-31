@@ -44,6 +44,12 @@
 	let availableCategoryOptions = $state<string[]>([]);
 	let availableColorOptions = $state<string[]>([]);
 
+	$effect(() => {
+		results.forEach((result) => {
+			result.expand = false;
+		});
+	});
+
 	// Subscribe to store changes
 	filter.subscribe((dims) => {
 		dimensions = dims;
@@ -84,10 +90,11 @@
 	});
 </script>
 
-{#snippet result(item)}
+{#snippet result(item: Product, interactive = true)}
 	<Card.Root
-		class="max-w-sm cursor-pointer"
+		class="max-w-sm {interactive ? 'cursor-pointer' : ''}"
 		onclick={() => {
+			if (!interactive) return;
 			let expand = item.expand;
 			results.forEach((result) => {
 				result.expand = false;
@@ -105,7 +112,7 @@
 					class:bg-black={item.color === 'Black'}
 				></div>
 			</div>
-			{#if item.expand}
+			{#if item.expand && interactive}
 				<div transition:slide class="mt-4">
 					{@html item.code}
 				</div>
@@ -184,7 +191,7 @@
 			{#each products as item}
 				{#if results.filter((result) => result.name === item.name).length == 0}
 					<div transition:slide class="opacity-60">
-						{@render result(item)}
+						{@render result(item, false)}
 					</div>
 				{/if}
 			{/each}
